@@ -4,11 +4,8 @@ from torchvision import transforms, models
 from PIL import Image
 import torch.nn as nn
 import json
-
 import os
 import gdown
-
-
 
 # LOAD CLASS NAMES
 with open("models/classes.json", "r") as f:
