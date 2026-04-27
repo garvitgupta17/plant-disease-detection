@@ -3,3 +3,4 @@ torchvision==0.17.2
 streamlit==1.32.0
 pillow==10.2.0
 numpy==1.26.4
+gdown
