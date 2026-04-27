@@ -5,6 +5,11 @@ from PIL import Image
 import torch.nn as nn
 import json
 
+import os
+import gdown
+
+
+
 # LOAD CLASS NAMES
 with open("models/classes.json", "r") as f:
     class_names = json.load(f)
@@ -38,3 +43,8 @@ if uploaded_file:
         pred = torch.argmax(outputs, dim=1)
 
     st.success(f"Prediction: {class_names[pred.item()]}")
+
+
+if not os.path.exists("models/prototype_model.pth"):
+    url = "PASTE_GOOGLE_DRIVE_LINK"
+    gdown.download(url, "models/prototype_model.pth", quiet=False)
