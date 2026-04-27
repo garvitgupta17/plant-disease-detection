@@ -18,7 +18,7 @@ st.set_page_config(page_title="Plant Disease Detection", page_icon="🌿", layou
 os.makedirs("models", exist_ok=True)
 
 if not os.path.exists("models/prototype_model.pth"):
-    url = "PASTE_YOUR_GOOGLE_DRIVE_LINK"
+    url = "https://drive.google.com/file/d/14gQRAlpMZZFohS2QgpxoUD8CEjOJkX-e/view?usp=sharing"
     gdown.download(url, "models/prototype_model.pth", quiet=False)
 
 # =========================
